@@ -1,0 +1,22 @@
+import { ExperienceRole } from '@/data/types'
+
+export default function ExperienceEntry({ role }: { role: ExperienceRole }) {
+  return (
+    <div className="border-b border-border pb-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="text-lg font-semibold">
+          {role.title} <span aria-hidden="true" className="text-muted">·</span>{' '}
+          <span className="text-muted">{role.company}</span>
+        </h3>
+        <span className="font-mono text-xs text-subtle">
+          {role.startDate} – {role.endDate}
+        </span>
+      </div>
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+        {role.bullets.map((bullet) => (
+          <li key={bullet}>{bullet}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
