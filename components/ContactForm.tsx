@@ -76,8 +76,9 @@ export default function ContactForm() {
           id="message"
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value.slice(0, 500) })}
-          rows={5}
-          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base outline-none transition-colors focus:border-accent"
+          rows={6}
+          maxLength={500}
+          className="mt-2 w-full resize-none rounded border border-border bg-panel px-4 py-3 text-base outline-none transition-colors focus:border-accent"
         />
         {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
       </div>

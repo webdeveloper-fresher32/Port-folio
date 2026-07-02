@@ -3,7 +3,7 @@
 import { ReactNode, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function ContactInfoCard({
+export default function ContactIconLink({
   icon,
   label,
   value,
@@ -27,31 +27,30 @@ export default function ContactInfoCard({
   }
 
   return (
-    <motion.a
-      href={href}
-      onClick={handleClick}
-      whileHover={{ y: -3, borderColor: '#6ee7b7' }}
-      className="relative flex items-center gap-4 rounded-lg border border-border bg-panel p-5"
-    >
-      <span className="shrink-0 text-2xl text-accent" aria-hidden="true">
+    <div className="relative">
+      <motion.a
+        href={href}
+        onClick={handleClick}
+        title={label}
+        aria-label={label}
+        whileHover={{ scale: 1.15, borderColor: '#6ee7b7', color: '#6ee7b7' }}
+        whileTap={{ scale: 0.95 }}
+        className="flex h-12 w-12 items-center justify-center rounded-full border border-border text-xl text-muted transition-colors"
+      >
         {icon}
-      </span>
-      <div className="min-w-0">
-        <p className="font-mono text-xs uppercase tracking-wide text-subtle">{label}</p>
-        <p className="truncate text-base text-muted">{value}</p>
-      </div>
+      </motion.a>
       <AnimatePresence>
         {copied && (
           <motion.span
-            initial={{ opacity: 0, y: -6 }}
+            initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="absolute -top-3 right-3 rounded bg-accent px-2 py-0.5 text-xs font-semibold text-ink"
+            className="absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-accent px-2 py-0.5 text-xs font-semibold text-ink"
           >
             Copied!
           </motion.span>
         )}
       </AnimatePresence>
-    </motion.a>
+    </div>
   )
 }
