@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import SkillsGrid from '@/components/SkillsGrid'
 import ProjectCard from '@/components/ProjectCard'
 import FadeIn from '@/components/FadeIn'
@@ -12,36 +13,46 @@ export default function HomePage() {
   return (
     <div className="mx-auto max-w-4xl space-y-16 px-6 py-16">
       <FadeIn>
-        <section>
-          <p className="font-mono text-sm text-accent">$ whoami</p>
-          <h1 className="mt-2 text-4xl font-bold">Ganesh Pirikirala</h1>
-          <p className="mt-2 text-lg text-muted">Full-Stack Software Engineer</p>
-          <p className="mt-4 max-w-2xl text-muted">
-            Full-stack Software Engineer with 2.5+ years of experience building enterprise-grade SaaS
-            applications using React, Next.js, TypeScript, Node.js, and MongoDB. Experienced in designing
-            scalable backend systems, AI-powered workflows, Stripe subscription platforms, and multi-tenant
-            architectures.
-          </p>
-          <div className="mt-6 flex gap-4">
-            <Link
-              href="/projects"
-              className="rounded bg-accent px-4 py-2 text-sm font-semibold text-base transition-transform hover:scale-105 active:scale-95"
-            >
-              View Projects
-            </Link>
-            <a
-              href="/resume.pdf"
-              className="rounded border border-border px-4 py-2 text-sm text-muted transition-all hover:scale-105 hover:text-accent active:scale-95"
-            >
-              Resume
-            </a>
-            <Link
-              href="/contact"
-              className="rounded border border-border px-4 py-2 text-sm text-muted transition-all hover:scale-105 hover:text-accent active:scale-95"
-            >
-              Contact
-            </Link>
+        <section className="flex flex-col items-center gap-10 md:flex-row md:justify-between">
+          <div className="md:max-w-2xl">
+            <p className="font-mono text-sm text-accent">$ whoami</p>
+            <h1 className="mt-2 text-4xl font-bold">Ganesh Pirikirala</h1>
+            <p className="mt-2 text-lg text-muted">Full-Stack Software Engineer</p>
+            <p className="mt-4 max-w-2xl text-muted">
+              Full-stack Software Engineer with 2.5+ years of experience building enterprise-grade SaaS
+              applications using React, Next.js, TypeScript, Node.js, and MongoDB. Experienced in designing
+              scalable backend systems, AI-powered workflows, Stripe subscription platforms, and multi-tenant
+              architectures.
+            </p>
+            <div className="mt-6 flex gap-4">
+              <Link
+                href="/projects"
+                className="rounded bg-accent px-4 py-2 text-sm font-semibold text-base transition-transform hover:scale-105 active:scale-95"
+              >
+                View Projects
+              </Link>
+              <a
+                href="/resume.pdf"
+                className="rounded border border-border px-4 py-2 text-sm text-muted transition-all hover:scale-105 hover:text-accent active:scale-95"
+              >
+                Resume
+              </a>
+              <Link
+                href="/contact"
+                className="rounded border border-border px-4 py-2 text-sm text-muted transition-all hover:scale-105 hover:text-accent active:scale-95"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
+          <Image
+            src="/profile.png"
+            alt="Ganesh Pirikirala"
+            width={200}
+            height={200}
+            priority
+            className="h-44 w-44 shrink-0 rounded-full border-2 border-border object-cover md:h-52 md:w-52"
+          />
         </section>
       </FadeIn>
 
