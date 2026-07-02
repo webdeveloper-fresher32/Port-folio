@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { validateContactForm, ContactFormInput } from '@/lib/validateContactForm'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
@@ -78,20 +79,40 @@ export default function ContactForm() {
         {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
       </div>
 
-      <button
+      <motion.button
         type="submit"
         disabled={status === 'submitting'}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         className="rounded bg-accent px-4 py-2 text-sm font-semibold text-base disabled:opacity-50"
       >
-        Send Message
-      </button>
+        {status === 'submitting' ? 'Sending…' : 'Send Message'}
+      </motion.button>
 
-      {status === 'success' && (
-        <p className="text-sm text-accent">Message sent — thanks for reaching out!</p>
-      )}
-      {status === 'error' && (
-        <p className="text-sm text-red-400">Something went wrong. Please email me directly instead.</p>
-      )}
+      <AnimatePresence mode="wait">
+        {status === 'success' && (
+          <motion.p
+            key="success"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="text-sm text-accent"
+          >
+            Message sent — thanks for reaching out!
+          </motion.p>
+        )}
+        {status === 'error' && (
+          <motion.p
+            key="error"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="text-sm text-red-400"
+          >
+            Something went wrong. Please email me directly instead.
+          </motion.p>
+        )}
+      </AnimatePresence>
     </form>
   )
 }

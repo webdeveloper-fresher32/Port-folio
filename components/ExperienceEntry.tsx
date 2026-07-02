@@ -1,8 +1,17 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { ExperienceRole } from '@/data/types'
 
 export default function ExperienceEntry({ role }: { role: ExperienceRole }) {
   return (
-    <div className="border-b border-border pb-6">
+    <motion.div
+      className="border-b border-border pb-6"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="text-lg font-semibold">
           {role.title} <span aria-hidden="true" className="text-muted">·</span>{' '}
@@ -17,6 +26,6 @@ export default function ExperienceEntry({ role }: { role: ExperienceRole }) {
           <li key={bullet}>{bullet}</li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   )
 }

@@ -46,3 +46,28 @@ export const SKILL_ICONS: Record<string, IconType> = {
   'Data Structures & Algorithms': TbBinaryTree,
   'Low Level Design': TbSitemap,
 }
+
+export const SKILL_COLORS: Record<string, string> = {
+  HTML5: '#E34F26',
+  CSS3: '#1572B6',
+  JavaScript: '#F7DF1E',
+  TypeScript: '#3178C6',
+  'React.js': '#61DAFB',
+  'Next.js': '#FFFFFF',
+  'Tailwind CSS': '#38BDF8',
+  Shadcn: '#FFFFFF',
+  'Material UI': '#007FFF',
+  'Node.js': '#3C873A',
+  'Express.js': '#FFFFFF',
+  MongoDB: '#47A248',
+  MySQL: '#4479A1',
+  'Azure Blob Storage': '#0078D4',
+  AWS: '#FF9900',
+  Docker: '#2496ED',
+  'VS Code': '#007ACC',
+  Git: '#F05032',
+  GitHub: '#FFFFFF',
+  'IntelliJ IDEA': '#FE315D',
+  'Data Structures & Algorithms': '#F59E0B',
+  'Low Level Design': '#A78BFA',
+}
