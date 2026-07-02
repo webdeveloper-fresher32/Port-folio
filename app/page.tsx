@@ -4,11 +4,9 @@ import SkillsGrid from '@/components/SkillsGrid'
 import ProjectCard from '@/components/ProjectCard'
 import FadeIn from '@/components/FadeIn'
 import { projects } from '@/data/projects'
-import { experience } from '@/data/experience'
 
 export default function HomePage() {
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 3)
-  const currentRole = experience[0]
 
   return (
     <div className="mx-auto w-[90%] max-w-[100rem] space-y-20 py-20">
@@ -71,18 +69,6 @@ export default function HomePage() {
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
-        </section>
-      </FadeIn>
-
-      <FadeIn delay={0.2}>
-        <section>
-          <h2 className="mb-6 font-mono text-base uppercase tracking-wide text-accent">Currently</h2>
-          <p className="text-lg text-muted">
-            {currentRole.title} at {currentRole.company} ({currentRole.startDate} – {currentRole.endDate}).{' '}
-            <Link href="/experience" className="text-accent hover:underline">
-              See full experience →
-            </Link>
-          </p>
         </section>
       </FadeIn>
     </div>

@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.github
+.env*.local
+.vercel
+.superpowers
+docs
+coverage
+npm-debug.log*

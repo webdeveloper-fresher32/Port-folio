@@ -1,17 +1,31 @@
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa6'
+
 export default function Footer() {
   return (
     <footer className="border-t border-border px-10 py-8 text-base text-subtle">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <span>&copy; {new Date().getFullYear()} Ganesh Pirikirala</span>
-        <div className="flex gap-4">
-          <a href="https://github.com/webdeveloper-fresher32" className="hover:text-accent">
-            GitHub
+        <div className="flex gap-5 text-xl">
+          <a
+            href="https://github.com/webdeveloper-fresher32"
+            aria-label="GitHub"
+            className="transition-colors hover:text-accent"
+          >
+            <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/ganesh-p-b711a924a" className="hover:text-accent">
-            LinkedIn
+          <a
+            href="https://www.linkedin.com/in/ganesh-p-b711a924a"
+            aria-label="LinkedIn"
+            className="transition-colors hover:text-accent"
+          >
+            <FaLinkedin />
           </a>
-          <a href="mailto:pirikiralaganesh1234@gmail.com" className="hover:text-accent">
-            Email
+          <a
+            href="mailto:pirikiralaganesh1234@gmail.com"
+            aria-label="Email"
+            className="transition-colors hover:text-accent"
+          >
+            <FaEnvelope />
           </a>
         </div>
       </div>
