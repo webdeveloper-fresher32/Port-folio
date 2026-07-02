@@ -47,7 +47,7 @@ export default function ContactForm() {
           id="name"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base"
+          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base outline-none transition-colors focus:border-accent"
         />
         {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
       </div>
@@ -60,21 +60,24 @@ export default function ContactForm() {
           id="email"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base"
+          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base outline-none transition-colors focus:border-accent"
         />
         {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-base text-muted">
-          Message
-        </label>
+        <div className="flex items-baseline justify-between">
+          <label htmlFor="message" className="block text-base text-muted">
+            Message
+          </label>
+          <span className="font-mono text-xs text-subtle">{form.message.length}/500</span>
+        </div>
         <textarea
           id="message"
           value={form.message}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          onChange={(e) => setForm({ ...form, message: e.target.value.slice(0, 500) })}
           rows={5}
-          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base"
+          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base outline-none transition-colors focus:border-accent"
         />
         {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
       </div>
