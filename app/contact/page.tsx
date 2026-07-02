@@ -3,18 +3,18 @@ import FadeIn from '@/components/FadeIn'
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto w-[80%] max-w-2xl space-y-8 py-16">
+    <div className="mx-auto w-[80%] max-w-3xl space-y-10 py-20">
       <FadeIn>
         <div>
-          <h1 className="text-3xl font-bold">Contact</h1>
-          <p className="mt-2 text-muted">
+          <h1 className="text-5xl font-bold">Contact</h1>
+          <p className="mt-3 text-lg text-muted">
             Reach out directly at{' '}
             <a href="mailto:pirikiralaganesh1234@gmail.com" className="text-accent hover:underline">
               pirikiralaganesh1234@gmail.com
             </a>{' '}
             or use the form below.
           </p>
-          <div className="mt-4 flex gap-4 text-sm">
+          <div className="mt-5 flex gap-5 text-base">
             <a href="https://www.linkedin.com/in/ganesh-p-b711a924a" className="text-accent hover:underline">
               LinkedIn
             </a>

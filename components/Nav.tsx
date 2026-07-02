@@ -9,16 +9,16 @@ const LINKS = [
 
 export default function Nav() {
   return (
-    <nav className="flex items-center justify-between border-b border-border px-6 py-4">
-      <Link href="/" className="font-mono text-accent transition-transform hover:scale-105">
+    <nav className="flex items-center justify-between border-b border-border px-10 py-5">
+      <Link href="/" className="font-mono text-lg text-accent transition-transform hover:scale-105">
         ganesh.dev
       </Link>
-      <div className="flex gap-6">
+      <div className="flex gap-8">
         {LINKS.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="group relative text-sm text-muted transition-colors hover:text-accent"
+            className="group relative text-base text-muted transition-colors hover:text-accent"
           >
             {link.label}
             <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />

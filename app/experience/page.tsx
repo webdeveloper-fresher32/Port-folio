@@ -4,11 +4,11 @@ import { experience } from '@/data/experience'
 
 export default function ExperiencePage() {
   return (
-    <div className="mx-auto w-[80%] max-w-4xl space-y-8 py-16">
+    <div className="mx-auto w-[85%] max-w-6xl space-y-10 py-20">
       <FadeIn>
-        <h1 className="text-3xl font-bold">Experience</h1>
+        <h1 className="text-5xl font-bold">Experience</h1>
       </FadeIn>
-      <div className="space-y-8">
+      <div className="space-y-10">
         {experience.map((role) => (
           <ExperienceEntry key={`${role.company}-${role.startDate}`} role={role} />
         ))}

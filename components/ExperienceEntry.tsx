@@ -13,15 +13,15 @@ export default function ExperienceEntry({ role }: { role: ExperienceRole }) {
       transition={{ duration: 0.5 }}
     >
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-2xl font-semibold">
           {role.title} <span aria-hidden="true" className="text-muted">·</span>{' '}
           <span className="text-muted">{role.company}</span>
         </h3>
-        <span className="font-mono text-xs text-subtle">
+        <span className="font-mono text-sm text-subtle">
           {role.startDate} – {role.endDate}
         </span>
       </div>
-      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+      <ul className="mt-4 list-disc space-y-3 pl-5 text-base text-muted">
         {role.bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>
         ))}

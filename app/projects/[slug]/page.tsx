@@ -15,30 +15,30 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   }
 
   return (
-    <div className="mx-auto w-[80%] max-w-4xl space-y-8 py-16">
+    <div className="mx-auto w-[85%] max-w-5xl space-y-10 py-20">
       <FadeIn>
         <div>
-          <h1 className="text-3xl font-bold">{project.name}</h1>
-          {project.company && <p className="mt-1 text-muted">{project.company}</p>}
+          <h1 className="text-5xl font-bold">{project.name}</h1>
+          {project.company && <p className="mt-2 text-lg text-muted">{project.company}</p>}
         </div>
       </FadeIn>
 
       <FadeIn delay={0.05}>
-        <div className="flex h-56 items-center justify-center rounded-lg border border-border bg-panel">
-          <span className="font-mono text-sm text-subtle">[ screenshot placeholder ]</span>
+        <div className="flex h-64 items-center justify-center rounded-lg border border-border bg-panel">
+          <span className="font-mono text-base text-subtle">[ screenshot placeholder ]</span>
         </div>
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <p className="text-muted">{project.description}</p>
+        <p className="text-lg text-muted">{project.description}</p>
       </FadeIn>
 
       <FadeIn delay={0.15}>
         <div>
-          <h2 className="font-mono text-sm uppercase tracking-wide text-accent">Tech Stack</h2>
-          <div className="mt-2 flex flex-wrap gap-2">
+          <h2 className="font-mono text-base uppercase tracking-wide text-accent">Tech Stack</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
-              <span key={tech} className="rounded border border-border px-2 py-1 text-xs text-muted">
+              <span key={tech} className="rounded border border-border px-3 py-1.5 text-sm text-muted">
                 {tech}
               </span>
             ))}
@@ -48,8 +48,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
       <FadeIn delay={0.2}>
         <div>
-          <h2 className="font-mono text-sm uppercase tracking-wide text-accent">Key Features</h2>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
+          <h2 className="font-mono text-base uppercase tracking-wide text-accent">Key Features</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-base text-muted">
             {project.features.map((feature) => (
               <li key={feature}>{feature}</li>
             ))}
@@ -61,7 +61,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         {project.liveUrl && (
           <a
             href={project.liveUrl}
-            className="rounded bg-accent px-4 py-2 text-sm font-semibold text-base transition-transform hover:scale-105 active:scale-95"
+            className="rounded bg-accent px-6 py-3 text-base font-semibold text-ink transition-transform hover:scale-105 active:scale-95"
           >
             View Live
           </a>
@@ -69,7 +69,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         {project.sourceUrl && (
           <a
             href={project.sourceUrl}
-            className="rounded border border-border px-4 py-2 text-sm text-muted transition-all hover:scale-105 hover:text-accent active:scale-95"
+            className="rounded border border-border px-6 py-3 text-base text-muted transition-all hover:scale-105 hover:text-accent active:scale-95"
           >
             Source Code
           </a>

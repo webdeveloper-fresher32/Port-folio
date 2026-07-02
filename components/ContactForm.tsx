@@ -38,35 +38,35 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm text-muted">
+        <label htmlFor="name" className="block text-base text-muted">
           Name
         </label>
         <input
           id="name"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="mt-1 w-full rounded border border-border bg-panel px-3 py-2 text-sm"
+          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base"
         />
-        {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name}</p>}
+        {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm text-muted">
+        <label htmlFor="email" className="block text-base text-muted">
           Email
         </label>
         <input
           id="email"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="mt-1 w-full rounded border border-border bg-panel px-3 py-2 text-sm"
+          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base"
         />
-        {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email}</p>}
+        {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm text-muted">
+        <label htmlFor="message" className="block text-base text-muted">
           Message
         </label>
         <textarea
@@ -74,9 +74,9 @@ export default function ContactForm() {
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           rows={5}
-          className="mt-1 w-full rounded border border-border bg-panel px-3 py-2 text-sm"
+          className="mt-2 w-full rounded border border-border bg-panel px-4 py-3 text-base"
         />
-        {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
+        {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
       </div>
 
       <motion.button
@@ -84,7 +84,7 @@ export default function ContactForm() {
         disabled={status === 'submitting'}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="rounded bg-accent px-4 py-2 text-sm font-semibold text-base disabled:opacity-50"
+        className="rounded bg-accent px-5 py-2.5 text-base font-semibold text-ink disabled:opacity-50"
       >
         {status === 'submitting' ? 'Sending…' : 'Send Message'}
       </motion.button>
