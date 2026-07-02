@@ -1,7 +1,14 @@
+import type { Metadata } from 'next'
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa6'
 import ContactForm from '@/components/ContactForm'
 import ContactIconLink from '@/components/ContactIconLink'
 import FadeIn from '@/components/FadeIn'
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    'Get in touch with Ganesh Pirikirala for full-stack engineering roles, freelance projects, or collaboration.',
+}
 
 const CONTACT_METHODS = [
   {

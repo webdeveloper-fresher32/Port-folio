@@ -11,6 +11,8 @@ const LINKS = [
   { href: '/experience', label: 'Experience' },
 ]
 
+const MotionLink = motion.create(Link)
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
@@ -62,12 +64,28 @@ export default function Nav() {
             )
           })}
         </div>
-        <Link
+        <MotionLink
           href="/contact"
-          className="shrink-0 rounded-full bg-accent px-5 py-2 text-sm font-semibold text-ink transition-transform hover:scale-105 active:scale-95"
+          animate={{
+            boxShadow: [
+              '0 0 0px rgba(110,231,183,0)',
+              '0 0 16px rgba(110,231,183,0.5)',
+              '0 0 0px rgba(110,231,183,0)',
+            ],
+          }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.92 }}
+          className="group flex shrink-0 items-center gap-1.5 rounded-full bg-accent px-5 py-2 text-sm font-semibold text-ink"
         >
           Contact
-        </Link>
+          <span
+            aria-hidden="true"
+            className="inline-block -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
+          >
+            →
+          </span>
+        </MotionLink>
       </motion.nav>
     </div>
   )

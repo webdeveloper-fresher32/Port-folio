@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import ProjectCard from '@/components/ProjectCard'
 import FadeIn from '@/components/FadeIn'
 import { projects } from '@/data/projects'
+
+export const metadata: Metadata = {
+  title: 'Projects',
+  description:
+    'Case studies from Ganesh Pirikirala\'s work at Cognitivo, including a Stripe subscription platform, a developer analytics platform, and a headless CMS marketing site — plus personal side projects.',
+}
 
 export default function ProjectsPage() {
   const featured = projects.filter((p) => p.featured)

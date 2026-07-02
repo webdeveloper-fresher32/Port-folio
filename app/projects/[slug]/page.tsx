@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getProjectBySlug } from '@/lib/getProjectBySlug'
 import { projects } from '@/data/projects'
@@ -5,6 +6,19 @@ import FadeIn from '@/components/FadeIn'
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }))
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const project = getProjectBySlug(params.slug)
+
+  if (!project) {
+    return { title: 'Project Not Found' }
+  }
+
+  return {
+    title: project.name,
+    description: project.oneLiner,
+  }
 }
 
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
