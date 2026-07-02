@@ -1,0 +1,102 @@
+import { Project } from './types'
+
+export const projects: Project[] = [
+  {
+    slug: 'stripe-subscription-platform',
+    name: 'Stripe Subscription Platform',
+    company: 'Cognitivo',
+    oneLiner: 'Production-grade subscription billing with checkout, proration, and rollback-safe batch billing.',
+    description:
+      'Designed and built a production-grade Stripe subscription platform supporting checkout, webhook idempotency, per-seat proration, batch billing with transactional rollback, a usage-based free tier, automated billing workflows, and secure Terms of Service enforcement.',
+    techStack: ['Node.js', 'TypeScript', 'Stripe', 'Express.js', 'MongoDB'],
+    features: [
+      'Checkout and webhook idempotency',
+      'Per-seat proration',
+      'Batch billing with transactional rollback',
+      'Usage-based free tier',
+      'Automated billing workflows',
+      'Secure Terms of Service enforcement',
+    ],
+    liveUrl: 'https://app.prospo.ai',
+    sourceUrl: null,
+    featured: true,
+  },
+  {
+    slug: 'developer-analytics-platform',
+    name: 'Developer Analytics Platform',
+    company: 'Cognitivo',
+    oneLiner: 'AI-assisted commit analytics and repository insights across GitHub REST/GraphQL and OAuth.',
+    description:
+      'Architected and built a full-stack developer analytics platform using FastAPI, React, SQLite, GitHub REST/GraphQL APIs, OAuth, webhooks, and background synchronization, delivering AI-assisted commit analytics, real-time repository insights, and bi-directional Gantt-based project management.',
+    techStack: ['FastAPI', 'React', 'SQLite', 'GitHub REST/GraphQL API', 'OAuth'],
+    features: [
+      'AI-assisted commit analytics',
+      'Real-time repository insights',
+      'Bi-directional Gantt-based project management',
+      'Background synchronization via webhooks',
+    ],
+    liveUrl: 'https://app-devanalytics-dev.azurewebsites.net/',
+    sourceUrl: null,
+    featured: true,
+  },
+  {
+    slug: 'marketing-website-cms',
+    name: 'Marketing Website & Headless CMS',
+    company: 'Cognitivo',
+    oneLiner: 'Full-stack marketing site with a headless CMS driving blog, events, and job workflows.',
+    description:
+      'Architected and built a full-stack marketing website and headless CMS using Next.js (App Router, React 19), PayloadCMS, MongoDB, and Azure (Blob Storage, Microsoft Graph Email API), delivering a dynamic blog/events platform, CMS-driven job application and event registration workflows, and automated CI/CD deployment via Docker to Azure Web App.',
+    techStack: ['Next.js', 'React 19', 'PayloadCMS', 'MongoDB', 'Azure Blob Storage', 'Docker'],
+    features: [
+      'Dynamic blog/events platform',
+      'CMS-driven job application workflow',
+      'Event registration workflow',
+      'Automated CI/CD deployment to Azure Web App',
+    ],
+    liveUrl: 'https://cognitivo.com.au',
+    sourceUrl: null,
+    featured: true,
+  },
+  {
+    slug: 'zetflix-movie-app',
+    name: 'ZetFlix Movie App',
+    company: null,
+    oneLiner: 'Netflix-inspired movie and TV discovery app built on the TMDB API.',
+    description:
+      'Built a modern movie streaming application using React 18 with TypeScript, featuring comprehensive movie and TV show discovery with TMDB API integration, advanced search, genre filtering, and watchlist management with localStorage persistence.',
+    techStack: ['React 18', 'TypeScript', 'Tailwind CSS', 'TMDB API'],
+    features: [
+      'Advanced search and genre filtering',
+      'Watchlist management with localStorage persistence',
+      'Infinite scroll pagination',
+    ],
+    liveUrl: 'https://zetflix-movies-app.vercel.app/',
+    sourceUrl: 'https://github.com/webdeveloper-fresher32/Zetflix-Movies-App',
+    featured: false,
+  },
+  {
+    slug: 'letschat-app',
+    name: 'LetsChat-App',
+    company: null,
+    oneLiner: 'Real-time chat app built on the MERN stack.',
+    description: 'Real-time communication app with effortless messaging powered by the MERN stack.',
+    techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+    features: ['Real-time messaging without delays'],
+    liveUrl: 'https://letschat-app32.netlify.app/',
+    sourceUrl: 'https://github.com/webdeveloper-fresher32/LetsChat-App',
+    featured: false,
+  },
+  {
+    slug: 'e-commerce-store',
+    name: 'E-Commerce Store',
+    company: null,
+    oneLiner: 'Full-featured storefront with auth, cart, and category filtering.',
+    description:
+      'Built with Angular, Spring Boot, MongoDB, and Tailwind CSS. Implemented user authentication and authorization, add-to-cart, and category-based filtered product display.',
+    techStack: ['Angular', 'Spring Boot', 'MongoDB', 'Tailwind CSS'],
+    features: ['User authentication and authorization', 'Add-to-cart', 'Category-based filtering'],
+    liveUrl: 'https://e-commerce-store-project.vercel.app/login',
+    sourceUrl: 'https://github.com/webdeveloper-fresher32/E-Commerce-Store',
+    featured: false,
+  },
+]
