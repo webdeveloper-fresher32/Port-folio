@@ -9,8 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        base: "#0a0a0f",
+        panel: "#111114",
+        border: "#27272a",
+        accent: "#6ee7b7",
+        muted: "#9ca3af",
+        subtle: "#71717a",
+      },
+      fontFamily: {
+        mono: ["ui-monospace", "SFMono-Regular", "monospace"],
       },
     },
   },
