@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   const sideProjects = projects.filter((p) => !p.featured)
 
   return (
-    <div className="mx-auto max-w-4xl space-y-12 px-6 py-16">
+    <div className="mx-auto w-[80%] max-w-6xl space-y-12 py-16">
       <section>
         <FadeIn>
           <h1 className="text-3xl font-bold">Projects</h1>

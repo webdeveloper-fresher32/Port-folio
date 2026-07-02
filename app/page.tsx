@@ -11,7 +11,7 @@ export default function HomePage() {
   const currentRole = experience[0]
 
   return (
-    <div className="mx-auto max-w-4xl space-y-16 px-6 py-16">
+    <div className="mx-auto w-[80%] max-w-6xl space-y-16 py-16">
       <FadeIn>
         <section className="flex flex-col items-center gap-10 md:flex-row md:justify-between">
           <div className="md:max-w-2xl">

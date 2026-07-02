@@ -3,7 +3,7 @@ import FadeIn from '@/components/FadeIn'
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-xl space-y-8 px-6 py-16">
+    <div className="mx-auto w-[80%] max-w-2xl space-y-8 py-16">
       <FadeIn>
         <div>
           <h1 className="text-3xl font-bold">Contact</h1>

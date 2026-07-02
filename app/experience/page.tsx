@@ -4,7 +4,7 @@ import { experience } from '@/data/experience'
 
 export default function ExperiencePage() {
   return (
-    <div className="mx-auto max-w-3xl space-y-8 px-6 py-16">
+    <div className="mx-auto w-[80%] max-w-4xl space-y-8 py-16">
       <FadeIn>
         <h1 className="text-3xl font-bold">Experience</h1>
       </FadeIn>
