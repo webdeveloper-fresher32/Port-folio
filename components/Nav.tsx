@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
+import VisitorCounter from './VisitorCounter'
 
 const LINKS = [
   { href: '/', label: 'Home' },
@@ -64,6 +65,7 @@ export default function Nav() {
             )
           })}
         </div>
+        <VisitorCounter />
         <MotionLink
           href="/contact"
           animate={{

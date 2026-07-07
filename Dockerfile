@@ -25,6 +25,10 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+RUN mkdir -p /app/.visitor-data && chown nextjs:nodejs /app/.visitor-data
+VOLUME ["/app/.visitor-data"]
+ENV VISITOR_LOG_DIR=/app/.visitor-data
+
 USER nextjs
 
 EXPOSE 3000

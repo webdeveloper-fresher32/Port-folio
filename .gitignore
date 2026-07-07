@@ -37,3 +37,6 @@ next-env.d.ts
 
 # superpowers brainstorming tool session state
 .superpowers/
+
+# visitor counter log (local/dev)
+/.visitor-data/
