@@ -7,11 +7,13 @@ export const experience: ExperienceRole[] = [
     startDate: 'Aug 2025',
     endDate: 'Present',
     bullets: [
-      'Designed and built a production-grade Stripe Subscription Platform supporting checkout, webhook idempotency, per-seat proration, batch billing with transactional rollback, usage-based free tier, automated billing workflows, and secure Terms of Service enforcement.',
-      'Architected an end-to-end AI Document & Meeting Intelligence Platform powering configurable document and PowerPoint generation through AI-driven templates, while orchestrating meeting transcription, LLM-powered speaker identification, AI-generated file notes, and dynamic Knowledge Graph synchronization for advisor-client intelligence.',
-      'Built a cloud-native Enterprise Collaboration Platform featuring an AI-powered Email Suite, Azure Blob Storage and AWS S3 abstraction, IndexedDB caching, secure upload pipelines, resilient file management, and seamless cloud migration.',
-      'Architected and built a full-stack Developer Analytics Platform using FastAPI, React, SQLite, GitHub REST/GraphQL APIs, OAuth, Webhooks, and background synchronization.',
-      'Architected and built a full-stack Marketing Website & Headless CMS using Next.js (App Router, React 19), PayloadCMS, MongoDB, and Azure.',
+      'Built an end-to-end AI meeting-intelligence pipeline (scheduling → transcription → speaker ID → AI summarization → knowledge graph updates) processing meetings in parallel async jobs with full versioning/audit trail.',
+      'Designed a bidirectional sync system between dynamic, ontology-driven forms and a persistent per-client knowledge graph, with a traceable graph visualization linking facts back to source transcripts.',
+      'Built a no-code, role-governed template engine (markdown + AI-prompt driven) powering both document and auto-generated PowerPoint output, with full versioning and diffing.',
+      'Built a full in-app email client with two AI-assist modes and a knowledge-graph-aware inline query feature.',
+      'Designed and implemented a Stripe-based subscription billing system from scratch: prorated per-seat billing, batch billing with atomic rollback, webhook idempotency, and a usage-based free tier.',
+      'Architected a full-stack GitHub analytics dashboard using FastAPI, React, SQLite, GitHub REST/GraphQL APIs, OAuth, and webhooks.',
+      'Contributed to a multi-cloud (Azure/AWS) app portal migration, building unified storage abstractions and usage dashboards.',
     ],
   },
   {
