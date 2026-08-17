@@ -36,6 +36,11 @@ export const experience: ExperienceRole[] = [
         image: '/system-designs/manage-template.png',
         description: 'Role-governed no-code template engine powering Markdown, DocuSeal signatures, and PowerPoint generation.',
       },
+      {
+        title: 'Full-Stack Developer Analytics Platform',
+        image: '/system-designs/developer-analytics.png',
+        description: 'Frontend-first incremental migration of an analytics dashboard using React, FastAPI, SQLite, and GitHub APIs with full wire-contract parity.',
+      },
     ],
   },
   {
