@@ -15,6 +15,28 @@ export const experience: ExperienceRole[] = [
       'Architected a full-stack GitHub analytics dashboard using FastAPI, React, SQLite, GitHub REST/GraphQL APIs, OAuth, and webhooks.',
       'Contributed to a multi-cloud (Azure/AWS) app portal migration, building unified storage abstractions and usage dashboards.',
     ],
+    systemDesigns: [
+      {
+        title: 'Multi-tenant Organisation Backend & Storage Sync',
+        image: '/system-designs/org-profile.png',
+        description: 'Complete architecture for tenant management with seamless Azure Blob and Microsoft SharePoint storage synchronization.',
+      },
+      {
+        title: 'Stripe Subscription Billing System',
+        image: '/system-designs/stripe-billing.png',
+        description: 'End-to-end payment flow including checkout, proration, event-driven webhooks, and invoice management.',
+      },
+      {
+        title: 'Email Signature & Microsoft 365 Integration',
+        image: '/system-designs/email-signature.png',
+        description: 'Secure email signature injection system using ReactQuill, MongoDB, and Microsoft 365 connectors.',
+      },
+      {
+        title: 'Manage Template Engine',
+        image: '/system-designs/manage-template.png',
+        description: 'Role-governed no-code template engine powering Markdown, DocuSeal signatures, and PowerPoint generation.',
+      },
+    ],
   },
   {
     company: 'Northgaze Inc',

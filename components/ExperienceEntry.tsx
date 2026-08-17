@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExperienceRole } from '@/data/types'
+import SystemDesignViewer from './SystemDesignViewer'
 
 const listVariants = {
   hidden: {},
@@ -51,6 +52,9 @@ export default function ExperienceEntry({ role }: { role: ExperienceRole }) {
           </motion.li>
         ))}
       </motion.ul>
+      {role.systemDesigns && role.systemDesigns.length > 0 && (
+        <SystemDesignViewer designs={role.systemDesigns} />
+      )}
     </motion.div>
   )
 }

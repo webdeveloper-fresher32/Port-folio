@@ -1,9 +1,16 @@
+export interface SystemDesign {
+  title: string
+  image: string
+  description?: string
+}
+
 export interface ExperienceRole {
   company: string
   title: string
   startDate: string // e.g. "Aug 2025"
   endDate: string // e.g. "Present"
   bullets: string[]
+  systemDesigns?: SystemDesign[]
 }
 
 export interface Project {
