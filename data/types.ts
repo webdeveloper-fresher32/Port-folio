@@ -24,6 +24,7 @@ export interface Project {
   liveUrl: string | null
   sourceUrl: string | null
   featured: boolean
+  systemDesigns?: SystemDesign[]
 }
 
 export interface SkillCategory {

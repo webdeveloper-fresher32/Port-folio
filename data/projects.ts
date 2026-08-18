@@ -2,6 +2,24 @@ import { Project } from './types'
 
 export const projects: Project[] = [
   {
+    slug: 'marketing-website-cms',
+    name: 'Marketing Website & Headless CMS',
+    company: 'Cognitivo',
+    oneLiner: 'Full-stack marketing site with a headless CMS driving blog, events, and job workflows.',
+    description:
+      'Architected and built a full-stack marketing website and headless CMS using Next.js (App Router, React 19), PayloadCMS, MongoDB, and Azure (Blob Storage, Microsoft Graph Email API), delivering a dynamic blog/events platform, CMS-driven job application and event registration workflows, and automated CI/CD deployment via Docker to Azure Web App.',
+    techStack: ['Next.js', 'React 19', 'PayloadCMS', 'MongoDB', 'Azure Blob Storage', 'Docker'],
+    features: [
+      'Dynamic blog/events platform',
+      'CMS-driven job application workflow',
+      'Event registration workflow',
+      'Automated CI/CD deployment to Azure Web App',
+    ],
+    liveUrl: 'https://cognitivo.com.au',
+    sourceUrl: null,
+    featured: true,
+  },
+  {
     slug: 'prospo-crm',
     name: 'Prospo CRM & Meeting Intelligence',
     company: 'Cognitivo',
@@ -63,22 +81,32 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: 'marketing-website-cms',
-    name: 'Marketing Website & Headless CMS',
-    company: 'Cognitivo',
-    oneLiner: 'Full-stack marketing site with a headless CMS driving blog, events, and job workflows.',
+    slug: 'techpath',
+    name: 'TechPath — Developer Learning Graph',
+    company: null,
+    oneLiner: 'Dynamic developer learning paths generator powered by Neo4j graph database and D3.js visualization.',
     description:
-      'Architected and built a full-stack marketing website and headless CMS using Next.js (App Router, React 19), PayloadCMS, MongoDB, and Azure (Blob Storage, Microsoft Graph Email API), delivering a dynamic blog/events platform, CMS-driven job application and event registration workflows, and automated CI/CD deployment via Docker to Azure Web App.',
-    techStack: ['Next.js', 'React 19', 'PayloadCMS', 'MongoDB', 'Azure Blob Storage', 'Docker'],
+      'Designed and built TechPath, an interactive application that generates custom skill-learning paths for developers. The system models skills as a directed acyclic graph (DAG) in Neo4j, traversing prerequisite relationships at arbitrary depths using multi-hop Cypher queries. Renders path data through a custom, physical force-directed D3.js visualization, and tracks completion progress in real-time.',
+    techStack: ['React', 'Node.js', 'Express.js', 'Neo4j', 'D3.js', 'Zod', 'Jest', 'Supertest'],
     features: [
-      'Dynamic blog/events platform',
-      'CMS-driven job application workflow',
-      'Event registration workflow',
-      'Automated CI/CD deployment to Azure Web App',
+      'Multi-hop variable-length Cypher query traversal in Neo4j to resolve deep prerequisite trees natively.',
+      'Dynamic physics-based force-directed visualization of learning paths built using D3.js.',
+      'Persistent real-time progress saved in Neo4j database using direct (User)-[:COMPLETED]->(Topic) relationships.',
+      'Graph cycle detection intercepting and rejecting cyclical dependencies with multi-hop validation.',
+      'Intelligent in-memory caching using node-cache with targeted invalidation keyed by anonymous user IDs.',
+      'Robust API layer validation using Zod schemas and request tracing via UUID middleware.',
+      'Client-side real-time topic search autocomplete indexing to prevent invalid queries.',
     ],
-    liveUrl: 'https://cognitivo.com.au',
-    sourceUrl: null,
-    featured: true,
+    liveUrl: 'https://wexa-ai-assignment-drab.vercel.app',
+    sourceUrl: 'https://github.com/webdeveloper-fresher32/wexa.ai-assignment',
+    featured: false,
+    systemDesigns: [
+      {
+        title: 'TechPath System Design & Key Flows',
+        image: '/system-designs/techpath.png',
+        description: 'Decoupled web application architecture deployed on Vercel: Vite/React frontend statically hosted on Edge Network, and Express/Node.js backend served as a Vercel Serverless Function communicating via Bolt protocol to a managed Neo4j database.',
+      },
+    ],
   },
   {
     slug: 'zetflix-movie-app',

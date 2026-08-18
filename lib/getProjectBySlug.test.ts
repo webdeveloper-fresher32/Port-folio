@@ -3,8 +3,8 @@ import { getProjectBySlug } from './getProjectBySlug'
 
 describe('getProjectBySlug', () => {
   it('returns the matching project', () => {
-    const project = getProjectBySlug('stripe-subscription-platform')
-    expect(project?.name).toBe('Stripe Subscription Platform')
+    const project = getProjectBySlug('prospo-crm')
+    expect(project?.name).toBe('Prospo CRM & Meeting Intelligence')
   })
 
   it('returns undefined for an unknown slug', () => {

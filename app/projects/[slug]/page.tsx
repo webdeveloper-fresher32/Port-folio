@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { getProjectBySlug } from '@/lib/getProjectBySlug'
 import { projects } from '@/data/projects'
 import FadeIn from '@/components/FadeIn'
+import SystemDesignViewer from '@/components/SystemDesignViewer'
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }))
@@ -70,6 +71,14 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </ul>
         </div>
       </FadeIn>
+
+      {project.systemDesigns && project.systemDesigns.length > 0 && (
+        <FadeIn delay={0.25}>
+          <div className="border-t border-border pt-10">
+            <SystemDesignViewer designs={project.systemDesigns} />
+          </div>
+        </FadeIn>
+      )}
 
       <div className="flex gap-4">
         {project.liveUrl && (
