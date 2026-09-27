@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getProjectBySlug } from '@/lib/getProjectBySlug'
@@ -39,9 +40,22 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       </FadeIn>
 
       <FadeIn delay={0.05}>
-        <div className="flex h-64 items-center justify-center rounded-lg border border-border bg-panel">
-          <span className="font-mono text-base text-subtle">[ screenshot placeholder ]</span>
-        </div>
+        {project.image ? (
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-border bg-panel shadow-lg">
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              className="object-cover object-top"
+              priority
+              sizes="(max-width: 1200px) 100vw, 1200px"
+            />
+          </div>
+        ) : (
+          <div className="flex h-64 items-center justify-center rounded-lg border border-border bg-panel">
+            <span className="font-mono text-base text-subtle">[ {project.name} ]</span>
+          </div>
+        )}
       </FadeIn>
 
       <FadeIn delay={0.1}>

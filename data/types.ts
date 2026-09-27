@@ -24,6 +24,7 @@ export interface Project {
   liveUrl: string | null
   sourceUrl: string | null
   featured: boolean
+  image?: string
   systemDesigns?: SystemDesign[]
 }
 

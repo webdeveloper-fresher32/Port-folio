@@ -10,13 +10,13 @@ import { projects } from '@/data/projects'
 
 const ROLES = [
   'Full-Stack Software Engineer',
-  'AI Product Builder',
-  'SaaS & Billing Systems Architect',
-  'React · Next.js · Node.js Developer',
+  'Java 17 & Spring Boot Architect',
+  'Next.js & React Systems Developer',
+  'AI & Enterprise Platform Builder',
 ]
 
 export default function HomePage() {
-  const featuredProjects = projects.filter((p) => p.featured).slice(0, 3)
+  const featuredProjects = projects.filter((p) => p.featured)
 
   return (
     <div className="mx-auto w-[90%] max-w-[100rem] space-y-20 py-20">
@@ -30,10 +30,11 @@ export default function HomePage() {
               <MorphingText texts={ROLES} />
             </p>
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
-              Full-stack Software Engineer with 2.5+ years of experience building enterprise-grade SaaS
-              applications using React, Next.js, TypeScript, Node.js, and MongoDB. Experienced in designing
-              scalable backend systems, AI-powered workflows, Stripe subscription platforms, and multi-tenant
-              architectures.
+              Full-Stack Software Engineer with nearly 3 years of experience building scalable SaaS and AI-powered
+              applications using React.js, Next.js, Node.js, Python (FastAPI), Spring Boot, and MongoDB, with a strong
+              foundation in distributed systems, microservices, REST API design, LLM-powered pipelines, and system design (HLD/LLD).
+              Experienced across AWS, Azure, Docker, Redis, Stripe, and CI/CD pipelines, using generative AI tooling (Claude Code)
+              to ship production software.
             </p>
             <div className="mt-8 flex gap-4">
               <Link
@@ -77,8 +78,13 @@ export default function HomePage() {
 
       <FadeIn delay={0.15}>
         <section>
-          <h2 className="mb-6 font-mono text-base uppercase tracking-wide text-accent">Featured Projects</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mb-6 flex items-baseline justify-between">
+            <h2 className="font-mono text-base uppercase tracking-wide text-accent">Featured Architecture & Projects</h2>
+            <Link href="/projects" className="text-sm font-mono text-subtle hover:text-accent">
+              View all ({projects.length}) &rarr;
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
